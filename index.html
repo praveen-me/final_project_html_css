@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final Layout</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <div class="fixed_header">
+        <div class="header_grid">
+            <h2 class="fixed_header_title">Stimulus</h2>
+            <a href="#" class="fixed_header_toggler"><i class="fas fa-bars"></i></a>
+        </div>
+        <ul class="fixed_nav_bar center">
+                <li class="nav_block"><a href="" class="nav_link">Home</a></li>
+                <li class="nav_block"><a href="" class="nav_link">About</a></li>
+                <li class="nav_block"><a href="" class="nav_link">Experience</a></li>
+                <li class="nav_block"><a href="" class="nav_link">Testimonial</a></li>
+                <li class="nav_block"><a href="" class="nav_link">Contact</a></li>
+            </ul>
+    </div>
+    <!-- First Section -->
+    <section class="grid first-section">
+        <div class="upper-section first-block">
+            <h1 class="title">Stimulus</h1>
+        </div>
+        <header class="upper-section second-block">
+            <div class="center-it">
+                <nav class="nav">
+                    <ul class="nav_bar center">
+                        <li class="nav_block"><a href="" class="nav_link">Home</a></li>
+                        <li class="nav_block"><a href="" class="nav_link">About</a></li>
+                        <li class="nav_block"><a href="" class="nav_link">Experience</a></li>
+                        <li class="nav_block"><a href="" class="nav_link">Testimonial</a></li>
+                        <li class="nav_block"><a href="" class="nav_link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="info_sec">
+                    <h3 class="info_sec_welcome">Welcome to my website</h3>
+                    <p class="info_sec_head">Hello, I'm <strong>Stimulus</strong> currently based in New York city.</p>
+                    <p class="info_sec_para">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="info_sec_button">Get Started</button>
+                </div>
+            </div>
+        </header>
+    </section>
+    
+    <main class="main">
+        <!-- Section Two -->
+        <section class="grid second_section">
+            <div class="s2_part_one">
+                <h1 class="s2_part_two_head">Donec auctor</h1>
+                <p class="s2_part_two_small">Ut enim ad minim veniam</p>
+                <p class="s2_part_two_para">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
+                <p class="s2_part_two_para">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="s2_part_two">
+                
+            </div>
+            <div class="s2_part_three">
+                <h1 class="skills_header">My Skills</h1>
+                <p class="skills_para">Photoshop. HTML CSS JS. Web Design</p>
+                <div class="skill_container">
+                    <span class="skill skill_frontend">Frontend Design</span><span class="skills_value">90%</span>
+                </div>
+                <div class="skill_container">
+                    <span class="skill">Backend Processing</span><span class="skills_value">70%</span>
+                </div>
+                <div class="skill_container">
+                    <span class="skill">HTML & CSS3</span><span class="skills_value">80%</span>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Script for Hamburger
+        let toggler  = document.querySelector('.fixed_header_toggler');
+
+        let nav = document.querySelector('.fixed_nav_bar');
+        
+        let clickCount = 0;
+
+        toggler.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount % 2 === 1) {
+                nav.classList.add('open');
+            } else {
+                nav.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
