@@ -1,5 +1,5 @@
 /* Embed Fonts */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:100,300');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:100,300,400,600');
 
 
 body {
@@ -87,7 +87,7 @@ a {
 
 .first-block, .s2_part_two {
     background: url('../media/home-img.jpg');
-    background-position: center .s2_part_three;
+    background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
 }
@@ -123,7 +123,7 @@ a {
 }
 
 .nav_link:hover {
-    color: #ff9800;
+    color: #eeb25a;
 }
 
 .info_sec {
@@ -137,7 +137,7 @@ a {
     color: #898787;
 }
 
-.info_sec_head, .s2_part_two_head, .skills_header {
+.heading {
     font-family: 'Roboto', sans-serif;
     font-size: 35px;
     font-weight: 300;
@@ -252,8 +252,14 @@ a {
     background-color: #eeb25a;
 }
 
+.skills_header, .skills_para{
+    color: #fff;
+}
+
 .skills_para {
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 
 .skill_container {
@@ -262,20 +268,82 @@ a {
 
 .skill, .skills_value {
     display: inline-block;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
 }
 
 .skill_frontend {
-    width: 88%;
+    width: 90%;
+}
+
+.value_frontend {
+    width: 10%;
+}
+
+.backend {
+    width : 70%;
+}
+
+.value_backend {
+    width: 30%;
+}
+
+.html {
+    width: 80%;
+}
+
+.value_html {
+    width : 20%;
 }
 
 .skills_value {
     border-bottom: 2px solid #fff;
     color: #fff;
+    text-align: right;
 }
 
 .skill {
     font-weight: bold;
     border-bottom: 2px solid #000;
+}
+
+/* Work Section */
+.third_section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.work_wrapper {
+    padding: 2.5rem;
+    line-height: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.work_icon {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.work_heading {
+    margin: 2rem 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.work__wrapper-1 {
+    background-color: #eeb25a;
+}
+
+.work__wrapper-2 {
+    background-color: #ff5722;
+}
+
+.work__wrapper-3 {
+    background-color: #000;
+}
+
+.work__wrapper-4 {
+    color: #000;
 }
 
 
@@ -297,8 +365,18 @@ a {
     .title, .nav_bar {
         display: none;
     }
-    
 
+    .second_section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh;
+    }
+    .s2_part_two {
+        height: 50vh;
+    }
+
+    .third_section {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -319,4 +397,17 @@ a {
     .title, .nav_bar {
         display: none;
     }
+
+    .second_section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh;
+    }
+    .s2_part_two {
+        height: 50vh;
+    }
+
+    .third_section {
+        grid-template-columns: 1fr;
+    }
 }
+
