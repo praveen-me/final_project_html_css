@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,6 +19,11 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 .wrapper {
@@ -87,7 +91,7 @@ a {
     grid-template-rows: 100vh;
 }
 
-.first-block, .s2_part_two {
+.first-block, .s2_part_two, .contact_form_image {
     background: url('../media/home-img.jpg');
     background-position: center !important;
     background-size: cover !important;
@@ -151,7 +155,7 @@ a {
      color : #a59e9e;
 }
 
-.info_sec_button {
+.info_sec_button, .btn {
     line-height: 50px;
     width: 12em;
     font-size: 1em;
@@ -164,6 +168,7 @@ a {
     color: #363636;
     font-family: 'PT Sans', sans-serif;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
 
 .info_sec_button:hover {
@@ -412,8 +417,95 @@ a {
 }
 
 /* Contact */
+.contact {
+    display : grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
 
+.contact_form_image {
+    background: url(../media/contact-img.jpg);
+}
 
+.contact_section {
+    padding: 1rem 2.5rem;
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.contact_head {
+    margin-bottom: 0;
+} 
+
+.contact_text {
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.contact_field {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 6px 14px;
+    border-bottom: 1px solid #eeb25a;
+    line-height: 1.5;
+    font-size: 1rem !important;
+    margin: 1rem 0;
+    resize: none;
+    background: transparent;
+    color: #fff; 
+    font-weight: 300;
+}
+
+.contact_field:focus {
+    outline: none;
+}
+
+.contact_field::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+
+.btn {
+    background-color: #fff;
+    border-color: #fff;     
+    font-weight: 300;
+    width: 20em;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.address {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2.5rem;
+}
+
+.address_text {
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.contact_item{
+    margin: 1.5rem 0;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.rotate-me {
+    transform: rotateY(180deg);
+}
+
+.gold_text {
+    color: #eeb25a;
+}
+
+.contact_item_text {
+    padding-left: 1rem;
+}
 
 /* Tablet BreakPoint */
 @media screen and (max-width : 768px) and (min-width : 451px){
@@ -449,6 +541,11 @@ a {
     .fourth_section {
         grid-template-columns: 1fr;
         grid-auto-rows: 450px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto 450px auto;
     }
 }
 
@@ -490,6 +587,11 @@ a {
 
     .fifth_section {
         grid-auto-rows: auto 300px;   
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto 300px auto;
     }
 }
 
